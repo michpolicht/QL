@@ -1,2 +1,2 @@
 # QL
-A C++ header-only logger.
+A simple C++ header-only logger.
