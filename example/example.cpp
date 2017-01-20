@@ -12,6 +12,8 @@
 //#define QL_NO_FATAL 	///< Turns off QL_FATAL macro.
 //#define QL_NO_LOG	///< Turns off all logging macros except QL_FATAL and QL_INFO
 
+#define QL_NO_STD_PUT_TIME	// Define if C++11 std::put_time is not available.
+
 #include "../include/ql.hpp"
 
 #include <fstream>

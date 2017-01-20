@@ -73,10 +73,6 @@ namespace ql {
 class Log
 {
 	public:
-		Log(const Log & other) = delete;
-
-		Log & operator =(const Log & other) = delete;
-
 		/**
 		 * Get Log singleton instance.
 		 * @return Log instance.
@@ -179,6 +175,10 @@ class Log
 		 * directly. Use Instance() method instead.
 		 */
 		Log();
+
+		Log(const Log & other);	// = delete
+
+		Log & operator =(const Log & other); // = delete
 
 	private:
 		LogStream m_combinedStream;

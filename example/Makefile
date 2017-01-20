@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-CXX_FLAGS=-std=c++11
+CXX_FLAGS=
 
 all: example exampled
 

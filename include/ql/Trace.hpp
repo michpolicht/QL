@@ -12,7 +12,7 @@ namespace ql {
  */
 struct Trace
 {
-	enum flag_t : int {
+	enum flag_t {
 		FILE = 1,
 		LINE = 2,
 		FUNCTION = 4,
@@ -57,7 +57,7 @@ std::ostream & operator <<(std::ostream & s, const ql::Trace & trace)
 			sep = ' ';
 		}
 		if (trace.flags & ql::Trace::DATE) {
-			std::time_t t = std::time(nullptr);
+			std::time_t t = std::time(0);
 #ifdef QL_NO_STD_PUT_TIME
 			char buff[128];	// 20 chars would be enough, but let's set it to paranoic size and avoid adaptative calls.
 			std::strftime(buff, sizeof(buff), "%Y-%m-%d %H:%M:%S", std::localtime(& t));
