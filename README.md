@@ -2,6 +2,8 @@
 
 A C++ header-only logger.
 
+[![Build Status](https://travis-ci.org/michpolicht/QL.svg?branch=master)](https://travis-ci.org/michpolicht/QL)
+
 Log class is a main component. Log class defines seven streams, which are instances
 of LogStream class. Each of them may be attached to any number of other streams.
 
