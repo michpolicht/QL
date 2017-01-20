@@ -10,7 +10,7 @@
 //#define QL_NO_ERROR	///< Turns off QL_ERROR macro.
 //#define QL_NO_INFO 	///< Turns off QL_INFO macro.
 //#define QL_NO_FATAL 	///< Turns off QL_FATAL macro.
-//#define QL_NO_LOG	///< Turns off all logging macros except QL_FATAL and QL_INFO
+//#define QL_NO_LOG	///< Turns off QL_DEBUG, QL_NOTE and QL_WARN macros.
 
 #define QL_NO_STD_PUT_TIME	// Define if C++11 std::put_time is not available.
 

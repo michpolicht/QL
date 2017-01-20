@@ -8,7 +8,7 @@
 
 #include "Log.hpp"
 
-#ifdef QL_NO_LOG			///< Turns off all logging macros except of QL_FATAL, QL_CRITICAL and QL_INFO.
+#ifdef QL_NO_LOG			///< Turns off QL_DEBUG, QL_NOTE and QL_WARN macros.
     #define QL_NO_DEBUG	///< Turns off QL_DEBUG macro.
     #define QL_NO_NOTE		///< Turns off QL_NOTE macro.
     #define QL_NO_WARN		///< Turns off QL_WARN macro.
