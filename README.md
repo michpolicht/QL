@@ -1,4 +1,5 @@
 # QL
+
 A C++ header-only logger.
 
 Log class is a main component. Log class defines seven streams, which are instances
