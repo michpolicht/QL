@@ -78,7 +78,7 @@
 * @return (void)0 or void.
  */
 #ifndef QL_NO_CRITICAL
-    #define QL_CRITICAL(EXPR) ::ql::Log::Instance().criticalStream() << "Critical error: " << EXPR << ::ql::Trace(::ql::Log::Instance().criticalStream().traceFlags(), __FILE__, __LINE__, __FUNCTION__) << std::endl, std::abort()
+    #define QL_CRITICAL(EXPR) ::ql::Log::Instance().criticalStream() << "Critical error: " << EXPR << ::ql::Trace(::ql::Log::Instance().criticalStream().traceFlags(), __FILE__, __LINE__, __FUNCTION__) << std::endl, std::exit(EXIT_FAILURE)
 #else
 	#define QL_CRITICAL(EXPR) (void)0
 #endif
@@ -99,7 +99,7 @@
 * @return (void)0 or void.
  */
 #ifndef QL_NO_FATAL
-    #define QL_FATAL(EXPR) ::ql::Log::Instance().fatalStream() << "Fatal error: " << EXPR << ::ql::Trace(::ql::Log::Instance().fatalStream().traceFlags(), __FILE__, __LINE__, __FUNCTION__) << std::endl, std::exit(EXIT_FAILURE)
+    #define QL_FATAL(EXPR) ::ql::Log::Instance().fatalStream() << "Fatal error: " << EXPR << ::ql::Trace(::ql::Log::Instance().fatalStream().traceFlags(), __FILE__, __LINE__, __FUNCTION__) << std::endl, std::abort()
 #else
 	#define QL_FATAL(EXPR) (void)0
 #endif
