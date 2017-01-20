@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-CXX_FLAGS=
+CXX_FLAGS=-Wall -Wextra -pedantic -Wsign-conversion
 
 all: example exampled
 
@@ -11,7 +11,7 @@ exampled: bin example.cpp
 	$(CXX) $(CXX_FLAGS) -DEXAMPLE_DEBUG example.cpp -o bin/exampled
 
 example: bin example.cpp
-	$(CXX) $(CXX_FLAGS) -DNDEBUG example.cpp -o bin/example
+	$(CXX) $(CXX_FLAGS) -O3 -DNDEBUG example.cpp -o bin/example
 
 bin:
 	mkdir bin

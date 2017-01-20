@@ -18,7 +18,7 @@
 
 #include <fstream>
 
-int main(int argc, char * argv[])
+int main(int, char * [])
 {
 	// Configure release mode logging style with date instead of file, line, function.
 #ifndef EXAMPLE_DEBUG
