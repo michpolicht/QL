@@ -23,7 +23,7 @@ int main(int argc, char * argv[])
 	ql::Log::Instance().setTraceFlags(ql::Trace::DATE);
 #endif
 
-	// Streams are initially attached to combined stream and combined stream is attached to std::cout.
+	// Initially std::cout is attached to combined stream.
 	// All streams will print to std::cout, through combined stream.
 #ifdef EXAMPLE_DEBUG
 	QL_INFO("Compiled with EXAMPLE_DEBUG macro - using debug logging style.");
@@ -44,7 +44,7 @@ int main(int argc, char * argv[])
 	if (!logFile.is_open())
 		QL_CRITICAL("Could not create a log file.");
 
-	// Attach combined stream to the text file stream.
+	// Attach the text file stream to combined stream.
 	ql::Log::Instance().combinedStream().attachStream(logFile);
 	QL_WARN("Second warning.");
 	QL_FATAL("Fatal exit, just to demonstrate the purpose of fatal stream.");
